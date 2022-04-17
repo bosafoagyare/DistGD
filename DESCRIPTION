@@ -20,3 +20,5 @@ Imports:
     sparklyr
 Depends: 
     tidyverse
+URL: https://github.com/bosafoagyare/DistGD
+BugReports: https://github.com/bosafoagyare/DistGD/issues
