@@ -3,9 +3,10 @@ Title: Distributed Grdaient Descent
 Version: 0.0.0.9000
 Authors@R: 
     c(
-    person("Benjamin", "Osafo Agyare", email = "bagyare@umich.edu", role = c("cre", "aut"),
+    person("Benjamin", "Osafo Agyare", email = "bagyare@umich.edu", role = c("cre", "aut")),
     person("Eduardo", "Ochoa Rivera", email = "eochoa@umich.edu", role = "aut"),
-    person("Victor", "Verma", email = "vkverma@umich.edu" role = "aut"))
+    person("Victor", "Verma", email = "vkverma@umich.edu", role = "aut")
+    )
 Description: Distributed Gradient Descent efficiently optimizes a global objective function  expressed
     as a sum of a list of local objective functions belonging to different agents situated in a network.
     You supply a list of local objective functions, weights of the connections between the agents,
