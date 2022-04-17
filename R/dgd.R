@@ -1,8 +1,3 @@
-
-
-
-
-
 calc_grad <- function(f) {
   force(f)
   function(x) grad(f, x)
@@ -68,15 +63,58 @@ perform_dgd_update <- function(main_tbl) {
   mutate(main_tbl, curr_x = next_xs)
 }
 
-run_dgd <- function(sc,
-                    f_list,
-                    grad_list = NULL,
-                    init_xs,
-                    init_step_size,
-                    weight_mat,
-                    num_iters,
-                    print = FALSE,
-                    make_trace = FALSE) {
+#' @name dgd
+#'
+#' @title Distributed Gradient Descent
+#'
+#' @description \code{dgd} optimizes a global objective function  expressed as a
+#'   sum of a list of local objective functions belonging to different agents
+#'   situated in a network. It returns unified returning the optimal values from
+#'   each network.
+#'
+#' @param sc a connection to a Spark cluster.
+#' @param f_list a list of local objective functions.
+#' @param grad_list an optional list of the gradients of the functions in
+#'   \code{f_list}. Must be written as R functions. If no supplied,
+#'   \code{link[numDeriv]{grad()}} in the \code{numDeriv} package is used to approximate them.
+#' @param init_xs a list of initial values.
+#' @param init_step_size An initial step size.
+#' @param weight_mat a matrix of weights of the connections between the agents.
+#' @param num_iters the number of iterations to perform.
+#' @param print a logical value indicating to print the current minimizer
+#'   estimates on each iteration.
+# @param make_trace
+#'
+#' @return A list of global min/max from each network
+#' @export
+#'
+#@examples
+dgd <- function(sc,
+                f_list,
+                grad_list = NULL,
+                init_xs,
+                init_step_size,
+                weight_mat,
+                num_iters,
+                print = FALSE,
+                make_trace = FALSE) {
+  if (missing(init_xs)) {
+    stop("argument init_xs is missing, with no default")
+  }
+  if (missing(init_step_size)) {
+    stop("argument init_step_size is missing, with no default")
+  }
+  if (missing(weight_mat)) {
+    stop("argument weight_mat is missing, with no default")
+  }
+
+  if (!is.null(grad_list) && (length(f_list) != length(grad_list))) {
+    stop("there must be one gradient for each function")
+  }
+  if (length(f_list) != length(init_xs)) {
+    stop("there must be one initial value for each function")
+  }
+
   main_tbl <- make_main_tbl(
     f_list, grad_list, init_xs, init_step_size, weight_mat
   )

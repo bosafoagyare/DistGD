@@ -22,3 +22,6 @@ Depends:
     tidyverse
 URL: https://github.com/bosafoagyare/DistGD
 BugReports: https://github.com/bosafoagyare/DistGD/issues
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
