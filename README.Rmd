@@ -32,3 +32,18 @@ devtools::install_github("bosafoagyare/DistGD")
 ## Example
 
 
+## Reference
+If you use DistGD, please cite the following paper:
+```
+@article{Tao:2019,
+ title = {A survey of distributed optimization},
+ author = {Tao Yang, Xinlei Yi},
+ volume = {47},
+ pages = {278--305},
+ year = 2019,
+ journal = {Annual Reviews in Control}
+}
+```
+
+## License
+DistGD is MIT licensed, as found in the [LICENSE](LICENSE) file
