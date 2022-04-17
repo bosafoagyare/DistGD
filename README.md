@@ -15,6 +15,9 @@ functions, weights of the connections between the agents, initialize a
 vector initial values, and it takes care of the details, returning the
 optimal values.
 
+*You can read more about the [reference]() and a [write-up]() for this
+library.*
+
 ## Installation
 
 You can install the development version of DistGD from
