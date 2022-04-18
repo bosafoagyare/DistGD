@@ -1,5 +1,5 @@
 Package: DistGD
-Title: Distributed Grdaient Descent
+Title: Distributed Gradient Descent
 Version: 0.0.0.9000
 Authors@R: 
     c(
