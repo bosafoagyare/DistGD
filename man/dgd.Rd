@@ -22,8 +22,8 @@ dgd(
 \item{f_list}{a list of local objective functions.}
 
 \item{grad_list}{an optional list of the gradients of the functions in
-\code{f_list}. Must be written as R functions. If no supplied,
-\code{link[numDeriv]{grad()}} in the \code{numDeriv} package is used to approximate them.}
+\code{f_list}. Must be written as R functions. If not supplied,
+\code{\link[numDeriv]{grad()}} in the \code{numDeriv} package is used to approximate them.}
 
 \item{init_xs}{a list of initial values.}
 
@@ -33,11 +33,13 @@ dgd(
 
 \item{num_iters}{the number of iterations to perform.}
 
-\item{print}{a logical value indicating to print the current minimizer
+\item{print}{a logical value indicating to whether to print the list of initial values.}
+
+\item{make_trace}{a logical value indicating whether to print the current minimizer
 estimates on each iteration.}
 }
 \value{
-A list of global min/max from each network
+a list of global min/max from each network
 }
 \description{
 \code{dgd} optimizes a global objective function  expressed as a
