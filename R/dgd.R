@@ -1,5 +1,5 @@
 
-# Helper Functions --------------------------------------------------------
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 calc_grad <- function(f) {
   force(f)
@@ -65,6 +65,8 @@ perform_dgd_update <- function(main_tbl) {
     map(unname)
   mutate(main_tbl, curr_x = next_xs)
 }
+
+#%%%%%%%%%%%%%%%%%%%%%%% Function to be Exported %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 #' @name dgd
 #'
