@@ -16,7 +16,7 @@ vector initial values, and it takes care of the details, returning the
 optimal values.
 
 *You can read more about the [reference](papers/yang_et_al_2019.pdf) and
-a [write-up](papers/report) for this library.*
+the [write-up](papers/report) for this library.*
 
 ## Installation
 

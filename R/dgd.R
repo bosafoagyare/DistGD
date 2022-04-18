@@ -1,3 +1,6 @@
+
+# Helper Functions --------------------------------------------------------
+
 calc_grad <- function(f) {
   force(f)
   function(x) grad(f, x)
