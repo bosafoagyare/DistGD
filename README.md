@@ -30,9 +30,9 @@ devtools::install_github("bosafoagyare/DistGD")
 
 ## Example
 
-**Implementing Ordinary Logistic Regression for a very big data**
+### Implementing Ordinary Logistic Regression for a very big data
 
-Simulate data:
+**Simulate data:**
 
 ``` r
 X       <- rnorm(n = 1000, 0, 1)
@@ -43,7 +43,7 @@ beta    <- c(-3,4)
 Y       <- X%*%beta + epsilon
 ```
 
-**Distributing data and cost function to agents**
+**Distribute data and cost function to agents**
 
 ``` r
 regress_loss <- function(beta_hat){
