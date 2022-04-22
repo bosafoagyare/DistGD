@@ -45,5 +45,5 @@ a list of global min/max from each network
 \code{dgd} optimizes a global objective function  expressed as a
 sum of a list of local objective functions belonging to different agents
 situated in a network. It returns unified list of the optimal values from
-each network.
+each agent.
 }
