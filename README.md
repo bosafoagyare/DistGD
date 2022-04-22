@@ -31,6 +31,7 @@ devtools::install_github("bosafoagyare/DistGD")
 ## Example
 
 **Implementing Ordinary Logistic Regression for a very big data**
+
 Simulate data:
 
 ``` r
