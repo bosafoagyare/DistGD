@@ -10,7 +10,7 @@ Authors@R:
 Description: Distributed Gradient Descent efficiently optimizes a global objective function  expressed
     as a sum of a list of local objective functions belonging to different agents situated in a network.
     You supply a list of local objective functions, weights of the connections between the agents,
-    initialize a vector initial values, and it takes care of the details, returning the optimal values.
+    initialize a vector initial values, and it takes care of the details, returning a list of the optimal values.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
