@@ -33,10 +33,10 @@ dgd(
 
 \item{num_iters}{the number of iterations to perform.}
 
-\item{print}{a logical value indicating to whether to print the list of initial values.}
+\item{print}{a logical value indicating whether to print the current estimates on each iteration.}
 
-\item{make_trace}{a logical value indicating whether to print the current minimizer
-estimates on each iteration.}
+\item{make_trace}{a logical value indicating whether to return a list with the minimizer estimates from
+the iterations.}
 }
 \value{
 a list of global min/max from each network

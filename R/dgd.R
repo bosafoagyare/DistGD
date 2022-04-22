@@ -86,9 +86,9 @@ perform_dgd_update <- function(main_tbl) {
 #' @param init_step_size An initial step size.
 #' @param weight_mat a matrix of weights of the connections between the agents.
 #' @param num_iters the number of iterations to perform.
-#' @param print a logical value indicating to whether to print the list of initial values.
-#' @param make_trace a logical value indicating whether to print the current minimizer
-#'   estimates on each iteration.
+#' @param print a logical value indicating whether to print the current estimates on each iteration.
+#' @param make_trace a logical value indicating whether to return a list with the minimizer estimates from
+#'  the iterations.
 #'
 #' @return a list of global min/max from each network
 #' @export
