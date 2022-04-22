@@ -23,7 +23,7 @@ dgd(
 
 \item{grad_list}{an optional list of the gradients of the functions in
 \code{f_list}. Must be written as R functions. If not supplied,
-\code{\link[numDeriv]{grad()}} in the \code{numDeriv} package is used to approximate them.}
+\code{\link[numDeriv]{grad}} in the \code{numDeriv} package is used to approximate them.}
 
 \item{init_xs}{a list of initial values.}
 

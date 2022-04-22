@@ -81,7 +81,7 @@ perform_dgd_update <- function(main_tbl) {
 #' @param f_list a list of local objective functions.
 #' @param grad_list an optional list of the gradients of the functions in
 #'   \code{f_list}. Must be written as R functions. If not supplied,
-#'   \code{\link[numDeriv]{grad()}} in the \code{numDeriv} package is used to approximate them.
+#'   \code{\link[numDeriv]{grad}} in the \code{numDeriv} package is used to approximate them.
 #' @param init_xs a list of initial values.
 #' @param init_step_size An initial step size.
 #' @param weight_mat a matrix of weights of the connections between the agents.
