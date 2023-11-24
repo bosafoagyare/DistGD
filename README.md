@@ -12,7 +12,7 @@ local objective functions belonging to different agents situated in a
 network via a cluster architecture like
 [Spark](https://spark.apache.org/). You supply a list of local objective
 functions, weights of the connections between the agents, initialize a
-vector initial values, and it takes care of the details, returning the
+vector initial values, and it takes care of the computations, returning the
 optimal values.
 
 *You can read more about the [reference](papers/yang_et_al_2019.pdf) and
